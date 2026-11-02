@@ -30,3 +30,4 @@ npm run dev
 5. Para ativar dados e login, siga as instruções de Neon do ZIP anterior. As chaves `DATABASE_URL` são apenas do servidor; nunca configure segredos com `VITE_`.
 
 **Limite de validação:** as dependências não puderam ser instaladas neste ambiente de geração (registro npm indisponível); faça o teste de renderização no StackBlitz antes de publicar.
+Atualizacao deploy Preview
