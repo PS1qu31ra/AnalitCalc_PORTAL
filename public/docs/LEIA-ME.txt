@@ -1,0 +1,3 @@
+O certificado PDF não constava no arquivo original recebido.
+Quando disponível, coloque aqui: certificado-analitcalc.pdf
+Ajuste o cartão de registro da HomePortal.tsx para apontar para esse PDF somente após adicionar o arquivo.

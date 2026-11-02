@@ -1,0 +1,693 @@
+.page {
+    min-height: 100vh;
+    padding: 40px 24px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    color: #18181b;
+  
+    background:
+      radial-gradient(
+        circle at 5% 0%,
+        rgba(153, 27, 27, 0.09),
+        transparent 35%
+      ),
+      #f8f7f6;
+  }
+  
+  
+  .shell {
+    width: min(1180px, 100%);
+    min-height: 720px;
+  
+    display: grid;
+    grid-template-columns:
+      330px minmax(0, 1fr);
+  
+    overflow: hidden;
+  
+    border: 1px solid #e7e5e4;
+    border-radius: 30px;
+  
+    background: #ffffff;
+  
+    box-shadow:
+      0 30px 90px
+      rgba(28, 25, 23, 0.11);
+  }
+  
+  
+  .sidebar {
+    padding: 38px 34px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    color: white;
+  
+    background:
+      linear-gradient(
+        160deg,
+        #a20f16,
+        #6d1115
+      );
+  }
+  
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  
+  .brandMark {
+    width: 48px;
+    height: 48px;
+  
+    display: grid;
+    place-items: center;
+  
+    border-radius: 15px;
+  
+    font-size: 23px;
+    font-weight: 900;
+  
+    color: #8f1117;
+  
+    background: #ffffff;
+  }
+  
+  
+  .brand div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .brand strong {
+    font-size: 21px;
+  }
+  
+  
+  .brand span {
+    font-size: 12px;
+  
+    color:
+      rgba(255,255,255,.68);
+  }
+  
+  
+  .sidebarContent {
+    margin-top: 70px;
+  }
+  
+  
+  .sidebarEyebrow {
+    font-size: 11px;
+    font-weight: 900;
+  
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  
+    color: #fecaca;
+  }
+  
+  
+  .sidebarContent h1 {
+    margin: 12px 0 16px;
+  
+    font-size: 36px;
+    line-height: 1.08;
+  }
+  
+  
+  .sidebarContent p {
+    margin: 0;
+  
+    color:
+      rgba(255,255,255,.75);
+  
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  
+  .steps {
+    margin-top: 48px;
+  
+    display: grid;
+    gap: 16px;
+  }
+  
+  
+  .step {
+    padding: 14px;
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    border-radius: 15px;
+  
+    color:
+      rgba(255,255,255,.55);
+  }
+  
+  
+  .step > span {
+    width: 36px;
+    height: 36px;
+  
+    display: grid;
+    place-items: center;
+  
+    flex: 0 0 36px;
+  
+    border:
+      1px solid
+      rgba(255,255,255,.25);
+  
+    border-radius: 50%;
+  
+    font-weight: 900;
+  }
+  
+  
+  .step div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .step strong {
+    font-size: 14px;
+  }
+  
+  
+  .step small {
+    margin-top: 3px;
+  
+    font-size: 11px;
+  }
+  
+  
+  .stepActive {
+    color: #ffffff;
+  
+    background:
+      rgba(255,255,255,.11);
+  }
+  
+  
+  .stepActive > span,
+  .stepDone > span {
+    color: #991b1b;
+  
+    border-color: #ffffff;
+  
+    background: #ffffff;
+  }
+  
+  
+  .stepDone {
+    color: #ffffff;
+  }
+  
+  
+  .sidebarFooter {
+    margin: 40px 0 0;
+  
+    color:
+      rgba(255,255,255,.55);
+  
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  
+  .formCard {
+    min-width: 0;
+  
+    padding:
+      48px 54px 42px;
+  }
+  
+  
+  .formHeader {
+    padding-bottom: 29px;
+  
+    border-bottom:
+      1px solid #e7e5e4;
+  }
+  
+  
+  .eyebrow {
+    display: block;
+  
+    margin-bottom: 8px;
+  
+    color: #991b1b;
+  
+    font-size: 11px;
+    font-weight: 900;
+  
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  
+  
+  .formHeader h2 {
+    margin: 0;
+  
+    color: #18181b;
+  
+    font-size: 38px;
+    line-height: 1.1;
+  }
+  
+  
+  .formHeader p {
+    max-width: 690px;
+  
+    margin: 12px 0 0;
+  
+    color: #71717a;
+  
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  
+  
+  .progress {
+    height: 4px;
+  
+    margin-top: 25px;
+  
+    overflow: hidden;
+  
+    border-radius: 999px;
+  
+    background: #f1f1f0;
+  }
+  
+  
+  .progress span {
+    display: block;
+  
+    height: 100%;
+  
+    border-radius: inherit;
+  
+    background:
+      linear-gradient(
+        90deg,
+        #991b1b,
+        #dc2626
+      );
+  
+    transition: width .25s ease;
+  }
+  
+  
+  .formBody {
+    padding-top: 32px;
+  }
+  
+  
+  .sectionTitle {
+    margin-bottom: 22px;
+  }
+  
+  
+  .sectionTitle > span {
+    color: #991b1b;
+  
+    font-size: 11px;
+    font-weight: 900;
+  
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  
+  .sectionTitle h3 {
+    margin: 5px 0 0;
+  
+    font-size: 19px;
+  }
+  
+  
+  .grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+  
+    gap: 22px 20px;
+  }
+  
+  
+  .grid label {
+    min-width: 0;
+  
+    display: flex;
+    flex-direction: column;
+  
+    gap: 8px;
+  
+    color: #3f3f46;
+  
+    font-size: 13px;
+    font-weight: 750;
+  }
+  
+  
+  .grid label > span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  
+  .grid label > span small {
+    color: #a1a1aa;
+  
+    font-size: 10px;
+  }
+  
+  
+  .fieldFull {
+    grid-column:
+      1 / -1;
+  }
+  
+  
+  .grid input,
+  .grid select {
+    width: 100%;
+    min-height: 50px;
+  
+    padding: 0 15px;
+  
+    border:
+      1px solid #d6d3d1;
+  
+    border-radius: 13px;
+  
+    outline: none;
+  
+    color: #18181b;
+  
+    font: inherit;
+    font-weight: 500;
+  
+    background: #ffffff;
+  
+    transition:
+      border-color .15s ease,
+      box-shadow .15s ease;
+  }
+  
+  
+  .grid input:focus,
+  .grid select:focus {
+    border-color: #991b1b;
+  
+    box-shadow:
+      0 0 0 3px
+      rgba(153,27,27,.08);
+  }
+  
+  
+  .passwordField {
+    position: relative;
+  }
+  
+  
+  .passwordField input {
+    padding-right: 76px;
+  }
+  
+  
+  .passwordField button {
+    position: absolute;
+  
+    right: 12px;
+    top: 50%;
+  
+    transform:
+      translateY(-50%);
+  
+    border: 0;
+  
+    color: #991b1b;
+  
+    font-size: 11px;
+    font-weight: 800;
+  
+    background: transparent;
+  
+    cursor: pointer;
+  }
+  
+  
+  .error {
+    color: #b91c1c;
+  
+    font-size: 11px;
+  }
+  
+  
+  .infoBox {
+    margin-top: 28px;
+    padding: 18px 20px;
+  
+    border:
+      1px solid #fed7d7;
+  
+    border-radius: 16px;
+  
+    background: #fff8f8;
+  }
+  
+  
+  .infoBox strong {
+    color: #7f1d1d;
+  
+    font-size: 13px;
+  }
+  
+  
+  .infoBox p {
+    margin: 6px 0 0;
+  
+    color: #78716c;
+  
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  
+  
+  .actions,
+  .actionsEnd {
+    margin-top: 32px;
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  
+  .actions {
+    justify-content:
+      space-between;
+  }
+  
+  
+  .actionsEnd {
+    justify-content:
+      flex-end;
+  }
+  
+  
+  .primaryButton,
+  .secondaryButton {
+    min-height: 50px;
+  
+    padding: 0 24px;
+  
+    border-radius: 13px;
+  
+    font-size: 13px;
+    font-weight: 850;
+  
+    cursor: pointer;
+  }
+  
+  
+  .primaryButton {
+    border: 0;
+  
+    color: #ffffff;
+  
+    background:
+      linear-gradient(
+        135deg,
+        #b0151b,
+        #851319
+      );
+  
+    box-shadow:
+      0 12px 30px
+      rgba(127,29,29,.2);
+  }
+  
+  
+  .secondaryButton {
+    border:
+      1px solid #d6d3d1;
+  
+    color: #44403c;
+  
+    background: #ffffff;
+  }
+  
+  
+  .successCard {
+    width: min(620px, 100%);
+  
+    padding: 52px;
+  
+    text-align: center;
+  
+    border:
+      1px solid #e7e5e4;
+  
+    border-radius: 28px;
+  
+    background: #ffffff;
+  
+    box-shadow:
+      0 28px 80px
+      rgba(28,25,23,.1);
+  }
+  
+  
+  .successIcon {
+    width: 68px;
+    height: 68px;
+  
+    margin: 0 auto 20px;
+  
+    display: grid;
+    place-items: center;
+  
+    border-radius: 50%;
+  
+    color: white;
+  
+    font-size: 28px;
+    font-weight: 900;
+  
+    background: #15803d;
+  }
+  
+  
+  .successCard h1 {
+    margin: 6px 0 14px;
+  
+    font-size: 34px;
+  }
+  
+  
+  .successCard p {
+    margin: 0 auto 28px;
+  
+    max-width: 480px;
+  
+    color: #71717a;
+  
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  
+  @media (
+    max-width: 900px
+  ) {
+    .page {
+      padding: 0;
+    }
+  
+    .shell {
+      min-height: 100vh;
+  
+      grid-template-columns: 1fr;
+  
+      border: 0;
+      border-radius: 0;
+    }
+  
+    .sidebar {
+      padding: 28px 24px;
+    }
+  
+    .sidebarContent {
+      margin-top: 36px;
+    }
+  
+    .steps {
+      margin-top: 28px;
+  
+      grid-template-columns:
+        1fr 1fr;
+    }
+  
+    .sidebarFooter {
+      display: none;
+    }
+  
+    .formCard {
+      padding: 34px 24px;
+    }
+  }
+  
+  
+  @media (
+    max-width: 620px
+  ) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .fieldFull {
+      grid-column: auto;
+    }
+  
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  
+    .actions {
+      flex-direction:
+        column-reverse;
+  
+      align-items: stretch;
+    }
+  
+    .actionsEnd {
+      align-items: stretch;
+    }
+  
+    .primaryButton,
+    .secondaryButton {
+      width: 100%;
+    }
+  }

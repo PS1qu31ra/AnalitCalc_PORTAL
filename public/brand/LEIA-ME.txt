@@ -1,0 +1,7 @@
+Os arquivos de imagem não estavam no ZIP original e por isso não foram inventados.
+Para ficar exatamente igual à página original, coloque aqui:
+- analitcalc-logo.png
+- grupo-quimica-analitica-aplicada.png
+- ufmg.png
+
+Quando forem adicionados, os logotipos substituem automaticamente os textos provisórios.

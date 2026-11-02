@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# Analit Portal — React/Vite com layout restaurado
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Esta versão **restaura a composição original da homepage fornecida no ZIP `analit-portal (12).zip`**, sem reinstalar o Next.js. Mantém login, cadastro, dashboard, React Router e integração Neon preparados no projeto Vite anterior.
 
-Currently, two official plugins are available:
+## O que foi corrigido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Restaurados o layout original, a estrutura centralizada, o fundo claro, a tipografia, a identidade vermelha, o painel de registro, a seção do mapa e as informações institucionais da home.
+- Mantido o CSS original em `src/components/portal/HomePortal.module.css`.
+- `HomePortal.tsx` agora usa `react-router-dom` no lugar de `next/link` e `img` no lugar de `next/image`.
+- O mapa foi migrado de volta com os pacotes `react-svg-worldmap` e `react-zoom-pan-pinch`.
+- O mapa recebe números reais somente do endpoint `/api/analytics/reach` na Vercel. Na prévia local do StackBlitz, sem API, aparece mapa sem países destacados. Nenhuma métrica é simulada.
+- Login/cadastro/painel não tiveram suas telas reestilizadas nesta correção.
 
-## React Compiler
+## ATENÇÃO — imagens ausentes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O ZIP original continha os diretórios `public/brand` e `public/docs`, **mas não continha os arquivos de logotipo e certificado**. Para não criar marcas institucionais falsas, este pacote mostra um fallback textual no lugar das imagens até você adicionar os originais. Leia `public/brand/LEIA-ME.txt`. O certificado não tem link ativo porque faltava o PDF.
 
-## Expanding the Oxlint configuration
+## Atualizar no StackBlitz
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+1. Mantenha o repositório Git atual. Faça backup/commit antes.
+2. Extraia este ZIP e copie **todo o conteúdo do ZIP** para a raiz do projeto StackBlitz (sobrescreva `src`, `package.json` e afins, sem substituir `.git` ou suas variáveis `.env`).
+3. No terminal, pare o servidor com `Ctrl+C` e execute:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+4. Confira a home (`/`), login (`/login`), cadastro (`/cadastro`) e painel (`/painel`). A instalação anterior de dependências Neon pode exibir avisos `ERESOLVE`, que não têm relação com o CSS.
+5. Para ativar dados e login, siga as instruções de Neon do ZIP anterior. As chaves `DATABASE_URL` são apenas do servidor; nunca configure segredos com `VITE_`.
+
+**Limite de validação:** as dependências não puderam ser instaladas neste ambiente de geração (registro npm indisponível); faça o teste de renderização no StackBlitz antes de publicar.
