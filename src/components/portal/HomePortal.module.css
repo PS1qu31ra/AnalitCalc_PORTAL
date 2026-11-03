@@ -1,0 +1,854 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(185, 28, 28, 0.08), transparent 26%),
+    linear-gradient(180deg, #fcfbfa 0%, #f7f2ef 100%);
+  color: #161616;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(120, 53, 15, 0.10);
+}
+
+.headerInner {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brandLogo {
+  width: auto;
+  height: 54px;
+  object-fit: contain;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.loginButton,
+.signupButton {
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.loginButton {
+  color: #1e1e1e;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(120, 53, 15, 0.14);
+}
+
+.signupButton {
+  color: #ffffff;
+  background: linear-gradient(135deg, #c8102e 0%, #8f0c16 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 16px 36px rgba(170, 21, 33, 0.18);
+}
+
+.loginButton:hover,
+.signupButton:hover,
+.primaryButton:hover,
+.secondaryButton:hover,
+.registrationCard:hover {
+  transform: translateY(-2px);
+}
+
+.hero {
+  padding: 72px 0 42px;
+}
+
+.heroInner {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #9f1239;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  color: #121212;
+}
+
+.heroTitle em {
+  font-style: normal;
+  color: #b10f1f;
+}
+
+.heroDescription {
+  width: min(820px, 100%);
+  margin: 24px auto 0;
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: #5a5a5a;
+}
+
+.heroActions {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 58px;
+  padding: 0 28px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryButton {
+  color: #ffffff;
+  background: linear-gradient(135deg, #d61428 0%, #920d18 100%);
+  box-shadow: 0 22px 42px rgba(173, 26, 38, 0.22);
+}
+
+.secondaryButton {
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(120, 53, 15, 0.14);
+}
+
+.affiliationRow {
+  margin-top: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.inlineAffiliationLogo,
+.inlineUfmgLogo {
+  width: 190px;
+  height: 104px;
+
+  display: block;
+
+  flex: 0 0 190px;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.registrationCard {
+  width: min(780px, 100%);
+  margin: 42px auto 0;
+  padding: 22px 24px;
+  border-radius: 22px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #fff 0%, #fff8f8 100%);
+  border: 1px solid rgba(177, 15, 31, 0.16);
+  box-shadow: 0 18px 38px rgba(127, 29, 29, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.registrationLabel {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.registrationNumber {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #b10f1f;
+}
+
+.registrationLink {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #881337;
+}
+
+.mapSection {
+  padding: 36px 0 48px;
+}
+
+.sectionContainer {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.mapIntro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #9f1239;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 900;
+  color: #151515;
+}
+
+.sectionDescription {
+  width: min(760px, 100%);
+  margin: 16px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #666666;
+}
+
+.mapCard {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(177, 15, 31, 0.10);
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 88% 5%,
+      rgba(177, 18, 24, 0.07),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fcf8f6 100%
+    );
+
+  box-shadow:
+    0 26px 65px
+    rgba(15, 23, 42, 0.07);
+}
+
+
+.mapHeader {
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+.mapStats {
+  display: flex;
+
+  gap: 12px;
+}
+
+
+.mapStat {
+  min-width: 130px;
+
+  padding: 15px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid #ede3df;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+}
+
+
+.mapStat strong {
+  color: #b10f1f;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing:
+    -0.04em;
+}
+
+
+.mapStat span {
+  margin-top: 7px;
+
+  color: #7b7370;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.mapLegend {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+.mapLegend span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #726a67;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+}
+
+
+.mapLegend i {
+  width: 11px;
+  height: 11px;
+
+  display: block;
+
+  border-radius: 3px;
+}
+
+
+.legendReached {
+  background: #b10f1f;
+}
+
+
+.legendPending {
+  background: #d7d7d7;
+}
+
+
+.mapViewer {
+  position: relative;
+
+  height: 560px;
+
+  margin-top: 8px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #eee3df;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fafafa,
+      #f5f3f2
+    );
+}
+
+
+.mapZoomWrapper {
+  width: 100% !important;
+  height: 100% !important;
+
+  overflow: hidden !important;
+
+  cursor: grab;
+}
+
+
+.mapZoomWrapper:active {
+  cursor: grabbing;
+}
+
+
+.mapZoomContent {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.mapWorld {
+  width: 1200px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.mapWorld svg {
+  display: block;
+
+  width: 1200px !important;
+
+  height: auto !important;
+}
+
+
+.mapControls {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 18px;
+  right: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.mapControls button {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    #e0d4cf;
+
+  border-radius: 12px;
+
+  color: #4b4340;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .94
+    );
+
+  box-shadow:
+    0 8px 22px
+    rgba(
+      15,
+      23,
+      42,
+      .08
+    );
+
+  cursor: pointer;
+
+  transition:
+    color .15s ease,
+    border-color .15s ease,
+    transform .15s ease;
+}
+
+
+.mapControls button:hover {
+  color: #b10f1f;
+
+  border-color:
+    rgba(
+      177,
+      15,
+      31,
+      .30
+    );
+
+  transform:
+    translateY(-1px);
+}
+
+
+.mapHint {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+  bottom: 14px;
+
+  transform:
+    translateX(-50%);
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  color: #6f6763;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .90
+    );
+
+  box-shadow:
+    0 6px 20px
+    rgba(
+      15,
+      23,
+      42,
+      .06
+    );
+}
+
+
+.mapEmpty {
+  margin-top: 10px;
+
+  padding: 16px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border:
+    1px solid #e9dfda;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+}
+
+
+.mapEmpty > span {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex: 0 0 40px;
+
+  border-radius: 50%;
+
+  color: #b10f1f;
+
+  font-size: 18px;
+
+  background: #f9e8e9;
+}
+
+
+.mapEmpty strong {
+  display: block;
+
+  color: #3f3937;
+
+  font-size: 0.88rem;
+}
+
+
+.mapEmpty p {
+  margin: 4px 0 0;
+
+  color: #817975;
+
+  font-size: 0.78rem;
+
+  line-height: 1.55;
+}
+
+
+.mapStatus {
+  margin: 12px 0 0;
+
+  color: #918783;
+
+  font-size: 0.8rem;
+}
+
+.contactBand {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #c8102e 0%, #8f0c16 100%);
+  color: #ffffff;
+}
+
+.contactInner {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 0.95fr 1.4fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contactTitle {
+  font-size: 1.32rem;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.contactText {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.footer {
+  padding: 22px 16px 30px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #7a7a7a;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .headerInner {
+    min-height: auto;
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+  }
+
+  .contactInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 52px;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .loginButton,
+  .signupButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .headerActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brandLogo {
+    height: 48px;
+  }
+
+  .affiliationRow {
+    gap: 22px;
+  }
+
+  .inlineAffiliationLogo,
+.inlineUfmgLogo {
+  width: 160px;
+  height: 76px;
+
+  flex-basis: 160px;
+}
+
+  .mapCard {
+    padding: 17px;
+    border-radius: 22px;
+  }
+
+  .mapHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .mapStats {
+    width: 100%;
+  }
+
+  .mapStat {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mapLegend {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .mapViewer {
+    height: 390px;
+  
+    border-radius: 17px;
+  }
+  
+  
+  .mapWorld {
+    width: 850px;
+  }
+  
+  
+  .mapWorld svg {
+    width: 850px !important;
+  }
+  
+  
+  .mapControls {
+    top: 10px;
+    right: 10px;
+  }
+  
+  
+  .mapControls button {
+    width: 38px;
+    height: 38px;
+  
+    border-radius: 10px;
+  }
+  
+  
+  .mapHint {
+    max-width:
+      calc(100% - 24px);
+  
+    overflow: hidden;
+  
+    text-overflow:
+      ellipsis;
+  
+    font-size: .64rem;
+  }
+
+  .mapEmpty {
+    align-items: flex-start;
+  }
+}
+/* Fallbacks only until the original institution-owned image assets are uploaded. */
+.brandLogoFallback { min-height: 54px; display: inline-flex; align-items: center; font-size: 1.85rem; font-weight: 900; letter-spacing: -.065em; color: #b10f1f; }
+.affiliationFallback { width: 190px; height: 104px; flex: 0 0 190px; display: inline-flex; justify-content: center; align-items: center; padding: 16px; border-radius: 16px; border: 1px solid rgba(177,15,31,.14); color: #8a222a; background: rgba(255,255,255,.84); font-size: .85rem; text-align:center; line-height:1.4; font-weight:750; }
+.ufmgFallback { font-size:1.8rem; letter-spacing:.02em; }
+@media(max-width:768px) { .affiliationFallback { width:160px; height:76px; flex-basis:160px; } }
