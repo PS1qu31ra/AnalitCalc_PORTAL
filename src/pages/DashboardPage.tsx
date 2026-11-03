@@ -55,6 +55,7 @@ export default function DashboardPage() {
             description: typeof app.description === "string" ? app.description : null,
             url: typeof app.url === "string" ? app.url : null,
             status: statusApp,
+            accessMode: app.accessMode === "public" ? "public" : "restricted",
             accessRole: typeof permission?.accessRole === "string" ? permission.accessRole : null,
             permissionStatus: statusPermissao,
           };
