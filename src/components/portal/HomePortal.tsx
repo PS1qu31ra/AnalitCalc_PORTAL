@@ -47,8 +47,8 @@ export default function HomePortal() {
               : "AnalitCalc integrates computational tools to support education, research, calculations, simulations, visualization and interpretation in Analytical Chemistry."}
           </p>
           <div className={styles.heroActions}>
-            <Link to="/login?app=analitcalc" className={styles.primaryButton}>
-              {isPt ? "Acessar AnalitCalc" : "Access AnalitCalc"}<span aria-hidden="true">→</span>
+            <Link to="/login" className={styles.primaryButton}>
+              {isPt ? "Explorar ferramentas" : "Explore tools"}<span aria-hidden="true">→</span>
             </Link>
             <Link to="/cadastro" className={styles.secondaryButton}>{dictionary.common.createAccount}</Link>
           </div>

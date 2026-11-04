@@ -9,14 +9,14 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "@neondatabase/auth": "^0.7.0-beta",
     "@neondatabase/serverless": "^1.2.0",
     "jose": "^6.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.0",
     "react-svg-worldmap": "^2.0.2",
-    "react-zoom-pan-pinch": "^4.2.0"
+    "react-zoom-pan-pinch": "^4.2.0",
+    "firebase": "^13.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

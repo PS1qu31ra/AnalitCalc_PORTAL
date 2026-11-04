@@ -36,10 +36,10 @@ import type {
         "Química Analítica com cálculo, simulação e",
   
       heroHighlight:
-        "interpretação em um só ambiente.",
+        "interpretação em ferramentas integradas ao seu acesso.",
   
       heroDescription:
-        "O AnalitCalc integra ferramentas computacionais para apoiar o ensino, a pesquisa e a análise de sistemas de Química Analítica em uma interface única e responsiva.",
+        "O AnalitCalc integra ferramentas computacionais para apoiar o ensino, a pesquisa e a análise de sistemas de Química Analítica em ferramentas independentes acessadas por uma conta única.",
   
       access:
         "Acessar AnalitCalc",
@@ -63,7 +63,7 @@ import type {
         "O QUE É O ANALITCALC",
   
       aboutTitle:
-        "Cálculo e raciocínio químico no mesmo ambiente.",
+        "Ferramentas independentes, uma experiência conectada.",
   
       aboutBody:
         "O AnalitCalc transforma procedimentos de Química Analítica em experiências computacionais interativas, combinando processamento matemático, representação gráfica e interpretação química.",
@@ -162,10 +162,10 @@ import type {
         "Analytical Chemistry with calculation, simulation and",
   
       heroHighlight:
-        "interpretation in one environment.",
+        "interpretation across independent tools.",
   
       heroDescription:
-        "AnalitCalc integrates computational tools to support teaching, research and Analytical Chemistry analysis through a single responsive interface.",
+        "AnalitCalc integrates computational tools to support teaching, research and Analytical Chemistry analysis through independent tools accessed with one account.",
   
       access:
         "Access AnalitCalc",
@@ -189,7 +189,7 @@ import type {
         "WHAT IS ANALITCALC",
   
       aboutTitle:
-        "Calculation and chemical reasoning in the same environment.",
+        "Independent tools, one connected experience.",
   
       aboutBody:
         "AnalitCalc turns Analytical Chemistry procedures into interactive computational experiences combining mathematical processing, graphical representation and chemical interpretation.",

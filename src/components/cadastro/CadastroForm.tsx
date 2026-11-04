@@ -254,9 +254,9 @@ export default function CadastroForm() {
     setEnviando(true);
 
     try {
-      // Só o Neon Auth processa e armazena as credenciais.
+      // Somente o Firebase Authentication processa as senhas.
       if (!authClient) {
-        setErroServidor("Configure VITE_NEON_AUTH_URL antes de criar contas.");
+        setErroServidor("Configure VITE_FIREBASE_* antes de criar contas.");
         return;
       }
       const { error } = await authClient.signUp.email({
@@ -265,9 +265,15 @@ export default function CadastroForm() {
         password: dados.password,
       });
       if (error) {
+        const code = error.code || "auth/unknown";
+        const jaExiste = code === "auth/email-already-in-use";
         setErroServidor(language === "pt-BR"
-          ? "Não foi possível criar a conta. Confirme os dados ou tente outro e-mail."
-          : "Could not create the account. Check your information or try another email.");
+          ? jaExiste
+            ? "Este e-mail já está cadastrado. Utilize a opção Entrar."
+            : `Não foi possível criar a conta no Firebase (${code}). Confira a configuração de Authentication.`
+          : jaExiste
+            ? "This email is already registered. Please sign in."
+            : `Firebase could not create your account (${code}). Check Authentication settings.`);
         return;
       }
 
@@ -276,7 +282,7 @@ export default function CadastroForm() {
       try {
         const resposta = await authClient.getSession();
         possuiSessao = resposta.data?.user?.email?.toLowerCase() === dados.email.trim().toLowerCase();
-      } catch { /* Neon pode exigir verificação de e-mail. */ }
+      } catch { /* Falha ao consultar a sessao. */ }
 
       if (possuiSessao) {
         try {
@@ -284,7 +290,10 @@ export default function CadastroForm() {
           navigate("/painel", { replace: true });
           return;
         } catch {
-          // Os dados complementares continuam pendentes até o próximo login.
+          setErroServidor(language === "pt-BR"
+            ? "Conta criada no Firebase, mas o perfil ainda nao foi salvo. Confira as regras do Firestore e entre novamente para concluir."
+            : "Account created in Firebase, but the profile was not saved. Check Firestore rules and sign in again.");
+          return;
         }
       }
       setPrecisaConfirmar(true);
@@ -340,8 +349,8 @@ export default function CadastroForm() {
           <p>
             {precisaConfirmar
               ? (language === "pt-BR"
-                  ? "Conta criada. Verifique seu e-mail, caso a confirmação esteja habilitada no Neon, e entre no portal para concluir seu perfil."
-                  : "Account created. Verify your email if required by Neon, then sign in to complete your profile.")
+                  ? "Conta criada. Entre no AnalitCalc para concluir seu perfil, se necessário."
+                  : "Account created. Sign in to complete your profile if needed.")
               : t.readyDescription}
           </p>
 
@@ -373,12 +382,12 @@ export default function CadastroForm() {
                   styles.brandMark
                 }
               >
-                A
+                AC
               </div>
 
               <div>
                 <strong>
-                  Analit
+                  AnalitCalc
                 </strong>
 
                 <span>

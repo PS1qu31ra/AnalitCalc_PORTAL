@@ -121,7 +121,7 @@ export default function LoginForm() {
 
     try {
       if (!authClient) {
-        setMensagem("Configure VITE_NEON_AUTH_URL no projeto para ativar o login.");
+        setMensagem("Configure VITE_FIREBASE_* no projeto para ativar o login.");
         return;
       }
       const { error } = await authClient.signIn.email({
@@ -158,12 +158,12 @@ export default function LoginForm() {
             className={styles.brand}
           >
             <div className={styles.brandMark}>
-              A
+              AC
             </div>
 
             <div>
               <strong>
-                Analit
+                AnalitCalc
               </strong>
 
               <span>
@@ -175,7 +175,7 @@ export default function LoginForm() {
 
           <div className={styles.visualContent}>
             <span className={styles.visualEyebrow}>
-              Analit Portal
+              AnalitCalc
             </span>
 
             <h1>
@@ -190,12 +190,12 @@ export default function LoginForm() {
             <div className={styles.platformPreview}>
               <div className={styles.platformItem}>
                 <div className={styles.platformIcon}>
-                  AC
+                  TC
                 </div>
 
                 <div>
                   <strong>
-                    AnalitCalc
+                    Titulometria Clássica
                   </strong>
 
                   <span>
@@ -209,12 +209,12 @@ export default function LoginForm() {
 
               <div className={styles.platformItem}>
                 <div className={styles.platformIcon}>
-                  AN
+                  CT
                 </div>
 
                 <div>
                   <strong>
-                    Analito
+                    Curvas de Titulação
                   </strong>
 
                   <span>
@@ -226,12 +226,12 @@ export default function LoginForm() {
 
               <div className={styles.platformItem}>
                 <div className={styles.platformIcon}>
-                  MS
+                  EQ
                 </div>
 
                 <div>
                   <strong>
-                    MARSYN
+                    Equilíbrios Químicos
                   </strong>
 
                   <span>
@@ -340,7 +340,7 @@ export default function LoginForm() {
                     type="button"
                     className={styles.forgotButton}
                     disabled
-                    title="Recuperação de senha será configurada no Neon Auth"
+                    title="Recuperação de senha será configurada no Firebase Authentication"
                   >
                     {t.forgot}
                   </button>
@@ -400,8 +400,8 @@ export default function LoginForm() {
 
               <p className={styles.sessionNote}>
                 {dictionary.common.login === "Entrar"
-                  ? "Sua sessão é gerenciada com segurança pelo Neon Auth."
-                  : "Your session is securely managed by Neon Auth."}
+                  ? "Sua sessão é gerenciada pelo Firebase Authentication."
+                  : "Your session is managed by Firebase Authentication."}
               </p>
 
 

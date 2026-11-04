@@ -81,19 +81,19 @@ scientificEcosystem: "Ecossistema científico",
         "Ferramentas poderosas. Um ecossistema conectado.",
     
       platformDescription:
-        "AnalitCalc e Visualizer compartilham a mesma identidade, perfil e estrutura de acesso dentro do Analit.",
+        "No AnalitCalc, cada ferramenta científica possui seu próprio ambiente e compartilha seu cadastro de acesso.",
     
       accessPortal:
         "Acessar plataforma",
     
       ecosystemEyebrow:
-        "ECOSSISTEMA ANALIT",
+        "FERRAMENTAS ANALITCALC",
     
       ecosystemTitle:
         "Uma identidade que acompanha toda a sua experiência científica.",
     
       ecosystemDescription:
-        "O Analit Portal centraliza sua conta, perfil e acesso às ferramentas científicas do ecossistema.",
+        "O AnalitCalc reúne suas ferramentas de Química Analítica em um painel com login e perfil únicos.",
     
       identityTitle:
         "Identidade centralizada",
@@ -114,7 +114,7 @@ scientificEcosystem: "Ecossistema científico",
         "COMO FUNCIONA",
     
       howTitle:
-        "Um único portal para diferentes experiências científicas.",
+        "Uma única conta para diversas ferramentas científicas independentes.",
     
       step1:
         "Crie sua conta",
@@ -126,7 +126,7 @@ scientificEcosystem: "Ecossistema científico",
         "Escolha uma plataforma",
     
       step2Description:
-        "Acesse AnalitCalc, Visualizer e futuras ferramentas diretamente pelo portal.",
+        "Selecione uma ferramenta do AnalitCalc e abra seu ambiente próprio.",
     
       step3:
         "Conte com o Analito",
@@ -162,10 +162,10 @@ scientificEcosystem: "Ecossistema científico",
         "ASSISTÊNCIA INTELIGENTE",
     
       assistantTitle:
-        "Analito acompanha você em todo o ecossistema.",
+        "Recursos científicos para acompanhar seus cálculos.",
     
       assistantDescription:
-        "Analito não é uma plataforma separada. Ele funciona como o assistente científico integrado aos módulos do AnalitCalc, Visualizer e às futuras ferramentas.",
+        "Cada ferramenta do AnalitCalc pode incorporar recursos científicos próprios, conforme seu desenvolvimento.",
     
       assistantFeature1:
         "Entende o contexto do módulo atual",
@@ -188,7 +188,7 @@ scientificEcosystem: "Ecossistema científico",
         "Entre na sua conta",
 
       description:
-        "Utilize seu e-mail e senha para acessar o Analit Portal.",
+        "Utilize seu e-mail e senha para acessar o AnalitCalc.",
 
       email:
         "E-mail",
@@ -209,7 +209,7 @@ scientificEcosystem: "Ecossistema científico",
         "Manter minha sessão ativa",
 
       enter:
-        "Entrar no portal",
+        "Entrar no AnalitCalc",
 
       noAccount:
         "Ainda não possui uma conta?",
@@ -218,7 +218,7 @@ scientificEcosystem: "Ecossistema científico",
         "Criar conta gratuitamente",
 
       back:
-        "Voltar ao portal",
+        "Voltar ao AnalitCalc",
 
       show:
         "Mostrar",
@@ -230,7 +230,7 @@ scientificEcosystem: "Ecossistema científico",
         "Seu ecossistema científico começa em uma única conta.",
 
       visualDescription:
-        "Acesse suas plataformas, mantenha seu perfil centralizado e continue suas atividades em diferentes ferramentas do ecossistema Analit.",
+        "Acesse suas calculadoras e outras ferramentas científicas em ambientes independentes, com uma conta AnalitCalc.",
 
       visualFooter:
         "Um único acesso para todas as plataformas do ecossistema.",
@@ -242,10 +242,10 @@ scientificEcosystem: "Ecossistema científico",
         "Informe sua senha.",
 
         temporaryMessage:
-        "A interface está pronta. A autenticação será ativada na integração com o Neon Auth.",
+        "A interface está pronta. A autenticação é realizada pelo Firebase Authentication.",
       
       securityNote:
-        "Suas credenciais serão processadas pelo sistema de autenticação do Analit e não serão armazenadas manualmente pelas plataformas individuais.",
+        "Suas credenciais são gerenciadas pelo Firebase Authentication, não pelas ferramentas individuais.",
       },
 
     signup: {
@@ -253,7 +253,7 @@ scientificEcosystem: "Ecossistema científico",
         "Cadastro de usuário",
 
       ecosystemTitle:
-        "Uma conta para todo o ecossistema Analit.",
+        "Uma conta para todas as ferramentas do AnalitCalc.",
 
       ecosystemDescription:
         "Centralize seu acesso às plataformas científicas e mantenha sua experiência integrada entre as ferramentas.",
@@ -286,7 +286,7 @@ scientificEcosystem: "Ecossistema científico",
         "Complete seu perfil",
 
       completeDescription:
-        "Estas informações nos ajudam a compreender o perfil de uso das plataformas e aprimorar o ecossistema Analit.",
+        "Estas informações nos ajudam a compreender o uso e aprimorar as ferramentas do AnalitCalc.",
 
       identification:
         "Identificação",
@@ -385,7 +385,7 @@ scientificEcosystem: "Ecossistema científico",
         "Perfil pronto para cadastro",
 
       readyDescription:
-        "Todas as informações foram validadas corretamente. A criação definitiva da conta será ativada quando conectarmos a autenticação ao Neon.",
+        "Todas as informações foram validadas corretamente. O cadastro é realizado pelo Firebase Authentication.",
 
         review:
         "Revisar informações",
@@ -473,19 +473,19 @@ scientificEcosystem: "Scientific ecosystem",
         "Powerful tools. A connected ecosystem.",
     
       platformDescription:
-        "AnalitCalc and Visualizer share the same identity, profile and access infrastructure within Analit.",
+        "In AnalitCalc, each scientific tool has its own environment and shares one user account.",
     
       accessPortal:
         "Access platform",
     
       ecosystemEyebrow:
-        "ANALIT ECOSYSTEM",
+        "ANALITCALC TOOLS",
     
       ecosystemTitle:
         "One identity throughout your scientific experience.",
     
       ecosystemDescription:
-        "Analit Portal centralizes your account, profile and access to the ecosystem's scientific tools.",
+        "AnalitCalc brings your analytical chemistry tools together under one account and dashboard.",
     
       identityTitle:
         "Centralized identity",
@@ -506,7 +506,7 @@ scientificEcosystem: "Scientific ecosystem",
         "HOW IT WORKS",
     
       howTitle:
-        "One portal for different scientific experiences.",
+        "One account for independent scientific tools.",
     
       step1:
         "Create your account",
@@ -518,7 +518,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Choose a platform",
     
       step2Description:
-        "Access AnalitCalc, Visualizer and future tools directly through the portal.",
+        "Choose an AnalitCalc tool and open its own environment.",
     
       step3:
         "Ask Analito",
@@ -554,10 +554,10 @@ scientificEcosystem: "Scientific ecosystem",
         "INTELLIGENT ASSISTANCE",
     
       assistantTitle:
-        "Analito follows you across the ecosystem.",
+        "Scientific capabilities for your calculations.",
     
       assistantDescription:
-        "Analito is not a separate platform. It works as the scientific assistant integrated into AnalitCalc, Visualizer and future tools.",
+        "Each AnalitCalc tool can include dedicated scientific capabilities as it evolves.",
     
       assistantFeature1:
         "Understands the current module context",
@@ -580,7 +580,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Sign in to your account",
 
       description:
-        "Use your email and password to access Analit Portal.",
+        "Use your email and password to access AnalitCalc.",
 
       email:
         "Email",
@@ -601,7 +601,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Keep me signed in",
 
       enter:
-        "Enter portal",
+        "Enter AnalitCalc",
 
       noAccount:
         "Don't have an account yet?",
@@ -610,7 +610,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Create a free account",
 
       back:
-        "Back to portal",
+        "Back to AnalitCalc",
 
       show:
         "Show",
@@ -622,7 +622,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Your scientific ecosystem starts with one account.",
 
       visualDescription:
-        "Access your platforms, keep your profile centralized and continue your activities across the Analit ecosystem.",
+        "Open independent scientific tools with your AnalitCalc account.",
 
       visualFooter:
         "One account for every platform in the ecosystem.",
@@ -634,10 +634,10 @@ scientificEcosystem: "Scientific ecosystem",
         "Enter your password.",
 
         temporaryMessage:
-        "The interface is ready. Authentication will be enabled when Neon Auth is integrated.",
+        "The interface is ready. Authentication is managed by Firebase Authentication.",
       
       securityNote:
-        "Your credentials will be processed by the Analit authentication system and will not be manually stored by individual platforms.",
+        "Your credentials are managed by Firebase Authentication, not by individual tools.",
       },
 
     signup: {
@@ -645,7 +645,7 @@ scientificEcosystem: "Scientific ecosystem",
         "User registration",
 
       ecosystemTitle:
-        "One account for the entire Analit ecosystem.",
+        "One account for all AnalitCalc tools.",
 
       ecosystemDescription:
         "Centralize access to scientific platforms and maintain an integrated experience across tools.",
@@ -678,7 +678,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Complete your profile",
 
       completeDescription:
-        "This information helps us understand platform usage and improve the Analit ecosystem.",
+        "This information helps us understand usage and improve AnalitCalc tools.",
 
       identification:
         "Identification",
@@ -777,7 +777,7 @@ scientificEcosystem: "Scientific ecosystem",
         "Profile ready for registration",
 
       readyDescription:
-        "All information was successfully validated. Account creation will be enabled when authentication is connected to Neon.",
+        "Your information has been validated. Account creation is handled by Firebase Authentication.",
 
         review:
         "Review information",

@@ -19,12 +19,6 @@ type Props = {
   erroDados?: string;
 };
 
-const categorias: Record<string, string> = {
-  analitcalc: "Química analítica",
-  visualizer: "Visualização científica",
-  analito: "Inteligência científica",
-  marsyn: "Espectrometria de massas",
-};
 
 export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataformas, erroDados }: Props) {
   const { language } = useLanguage();
@@ -54,14 +48,14 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
   return (
     <main className={styles.page}>
       <aside className={styles.sidebar}>
-        <Link to="/" className={styles.brand} aria-label="Página inicial Analit">
-          <span className={styles.brandMark}>A</span>
-          <span><strong>Analit</strong><small>Scientific ecosystem</small></span>
+        <Link to="/" className={styles.brand} aria-label="Página inicial AnalitCalc">
+          <span className={styles.brandMark}>AC</span>
+          <span><strong>AnalitCalc</strong><small>{en ? "Scientific tools" : "Ferramentas científicas"}</small></span>
         </Link>
         <div className={styles.navTitle}>{en ? "WORKSPACE" : "AMBIENTE"}</div>
         <nav className={styles.nav} aria-label={en ? "Main navigation" : "Navegação principal"}>
           <span className={styles.navActive}><span>◫</span>{en ? "Overview" : "Visão geral"}</span>
-          <a href="#plataformas"><span>▦</span>{en ? "My platforms" : "Minhas plataformas"}</a>
+          <a href="#plataformas"><span>▦</span>{en ? "My tools" : "Minhas ferramentas"}</a>
           <a href="#perfil"><span>◉</span>{en ? "My profile" : "Meu perfil"}</a>
         </nav>
         <div className={styles.sidebarBottom}>
@@ -74,7 +68,7 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
 
       <section className={styles.main}>
         <header className={styles.topbar}>
-          <div className={styles.breadcrumb}>Analit <span>/</span> {en ? "Workspace" : "Meu ambiente"}</div>
+          <div className={styles.breadcrumb}>AnalitCalc <span>/</span> {en ? "Workspace" : "Meu ambiente"}</div>
           <div className={styles.topActions}><LanguageSwitcher /><button type="button" className={styles.topLogout} onClick={sair} disabled={saindo}>{en ? "Sign out" : "Sair"}</button><span className={styles.avatarSmall}>{iniciais || "A"}</span></div>
         </header>
         <div className={styles.content}>
@@ -82,9 +76,9 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
             <div>
               <div className={styles.kicker}>{en ? "YOUR SCIENTIFIC SPACE" : "SEU ESPAÇO CIENTÍFICO"}</div>
               <h1>{en ? `Welcome, ${primeiroNome}.` : `Olá, ${primeiroNome}.`}</h1>
-              <p>{en ? "Your scientific tools, access permissions and profile are in one place." : "Suas ferramentas científicas, permissões de acesso e informações de perfil em um só lugar."}</p>
+              <p>{en ? "Independent scientific tools, permissions and your profile in one place." : "Ferramentas científicas independentes, acessos e seu perfil em um só lugar."}</p>
             </div>
-            <div className={styles.heroLogo}>A<span>ANALIT PORTAL</span></div>
+            <div className={styles.heroLogo}>A<span>ANALITCALC</span></div>
           </section>
 
           {erroDados && <div className={styles.alert} role="alert">{erroDados}</div>}
@@ -92,14 +86,14 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
 
           <div className={styles.stats}>
             <div className={styles.stat}><span>{en ? "Available access" : "Acessos liberados"}</span><strong>{erroDados ? "—" : autorizadas.length}</strong><small>{en ? "Active permissions" : "Permissões ativas"}</small></div>
-            <div className={styles.stat}><span>{en ? "In your ecosystem" : "No ecossistema"}</span><strong>{erroDados ? "—" : plataformas.length}</strong><small>{en ? "Listed platforms" : "Plataformas cadastradas"}</small></div>
+            <div className={styles.stat}><span>{en ? "Tools in catalog" : "Ferramentas no catálogo"}</span><strong>{erroDados ? "—" : plataformas.length}</strong><small>{en ? "Registered tools" : "Ferramentas cadastradas"}</small></div>
             <div className={styles.stat}><span>{en ? "My account" : "Minha conta"}</span><strong className={styles.statWord}>{en ? "Active" : "Ativa"}</strong><small>{email}</small></div>
           </div>
 
           <section id="plataformas" className={styles.section}>
-            <div className={styles.sectionHeading}><div><span>{en ? "ECOSYSTEM" : "ECOSSISTEMA"}</span><h2>{en ? "My platforms" : "Minhas plataformas"}</h2><p>{en ? "Only authorized apps can be opened." : "Os aplicativos aparecem conforme suas permissões no banco de dados."}</p></div></div>
+            <div className={styles.sectionHeading}><div><span>{en ? "ANALITCALC" : "ANALITCALC"}</span><h2>{en ? "My tools" : "Minhas ferramentas"}</h2><p>{en ? "Each tool opens in its own environment, according to your permissions." : "Cada ferramenta abre em seu próprio ambiente, conforme suas permissões."}</p></div></div>
             {!erroDados && autorizadas.length === 0 && (
-              <div className={styles.empty}>{en ? "No platforms are enabled for your account yet." : "Nenhuma plataforma está liberada para sua conta. As liberações são controladas pelo Analit."}</div>
+              <div className={styles.empty}>{en ? "No tool is enabled for your account yet." : "Nenhuma ferramenta está liberada para sua conta. Os acessos são administrados no AnalitCalc."}</div>
             )}
             <div className={styles.cards}>
               {autorizadas.map((app) => {
@@ -107,11 +101,11 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
                 return (
                   <article key={app.id} className={styles.platformCard}>
                     <div className={styles.platformTop}><span className={styles.platformIcon}>{app.name.slice(0, 2).toUpperCase()}</span><span className={styles.enabled}>● {en ? "Enabled" : "Liberado"}</span></div>
-                    <span className={styles.category}>{categorias[app.slug] ?? (en ? "Scientific tool" : "Ferramenta científica")}</span>
+                    <span className={styles.category}>{[app.platform, app.category].filter(Boolean).join(" · ")}</span>
                     <h3>{app.name}</h3>
-                    <p>{app.description ?? (en ? "Scientific application in the Analit ecosystem." : "Ferramenta científica do ecossistema Analit.")}</p>
+                    <p>{app.description ?? (en ? "Independent scientific tool in AnalitCalc." : "Ferramenta científica independente do AnalitCalc.")}</p>
                     {href ? (
-                      <a href={href} target="_blank" rel="noopener noreferrer" className={styles.accessButton}>{en ? "Open platform" : "Acessar plataforma"} <span>↗</span></a>
+                      <a href={href} target="_blank" rel="noopener noreferrer" className={styles.accessButton}>{en ? "Open tool" : "Abrir ferramenta"} <span>↗</span></a>
                     ) : (
                       <div className={styles.linkMissing}>{en ? "Access enabled · Link pending" : "Acesso liberado · Link em configuração"}</div>
                     )}
@@ -121,12 +115,12 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
             </div>
             {indisponiveis.length > 0 && !erroDados && (
               <>
-                <h3 className={styles.subheading}>{en ? "Other platforms" : "Outras plataformas"}</h3>
+                <h3 className={styles.subheading}>{en ? "Other tools" : "Outras ferramentas"}</h3>
                 <div className={styles.otherList}>
                   {indisponiveis.map((app) => (
                     <div className={styles.otherApp} key={app.id}>
                       <span className={styles.otherIcon}>{app.name.slice(0, 2).toUpperCase()}</span>
-                      <span className={styles.otherName}><strong>{app.name}</strong><small>{categorias[app.slug] ?? "Analit"}</small></span>
+                      <span className={styles.otherName}><strong>{app.name}</strong><small>{[app.platform, app.category].filter(Boolean).join(" · ")}</small></span>
                       <span className={styles.otherStatus}>{app.status === "development" ? (en ? "In development" : "Em desenvolvimento") : app.permissionStatus === "blocked" ? (en ? "Blocked" : "Bloqueado") : app.permissionStatus === "pending" ? (en ? "Pending" : "Pendente") : (en ? "Not authorized" : "Sem permissão")}</span>
                     </div>
                   ))}
@@ -142,7 +136,7 @@ export function PainelUsuario({ nome, email, instituicao, tipoPerfil, plataforma
               <div><strong>{nome}</strong><span>{email}</span><small>{[instituicao, tipoPerfil].filter(Boolean).join(" · ") || (en ? "Complete your profile during registration." : "Dados complementares não informados.")}</small></div>
             </div>
           </section>
-          <footer className={styles.footer}>Analit Portal · {en ? "Scientific ecosystem" : "Ecossistema científico"}</footer>
+          <footer className={styles.footer}>AnalitCalc · {en ? "Independent scientific tools" : "Ferramentas científicas independentes"}</footer>
         </div>
       </section>
     </main>

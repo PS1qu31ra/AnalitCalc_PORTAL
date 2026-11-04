@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+    function profileFieldsAllowed() {
+      return request.resource.data.keys().hasOnly([
+        'fullName', 'email', 'institution', 'profileType',
+        'profileTypeOther', 'areaCode', 'areaOther', 'academicLevel',
+        'professionalExperienceRange', 'primaryGoal', 'countryCode',
+        'countryOther', 'stateCode', 'discoverySource',
+        'discoverySourceOther', 'updatedAt'
+      ])
+      && request.resource.data.email == request.auth.token.email
+      && request.resource.data.fullName is string
+      && request.resource.data.institution is string
+      && request.resource.data.profileType in [
+        'student','faculty','researcher','lab_technician',
+        'lab_professional','industry_professional','other'
+      ];
+    }
+    match /userProfiles/{uid} {
+      allow get: if isOwner(uid);
+      allow list: if false;
+      allow create, update: if isOwner(uid) && profileFieldsAllowed();
+      allow delete: if false;
+    }
+    match /apps/{slug} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+    match /userPermissions/{uid}/apps/{slug} {
+      allow get, list: if isOwner(uid);
+      allow write: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
